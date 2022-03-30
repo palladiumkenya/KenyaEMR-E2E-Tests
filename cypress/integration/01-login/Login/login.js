@@ -1,6 +1,6 @@
 import { Given, Then, When } from "cypress-cucumber-preprocessor/steps";
 
-const url = "http://prod.kenyahmis.org:8600/openmrs/kenyaemr/userHome.page"; 
+const url = "http://197.248.44.228:8600/openmrs/login.htm;jsessionid=FF5513350BC886BF8CE8C6832D315C9C?redirect=kenyaemr%2FuserHome.page%3F"; 
 
 Given ('user arrives at the login page', () => {
     cy.visit(url);
@@ -13,5 +13,5 @@ When ('user logs using {string} and {string} to the Dashboard', (username, passw
 })
 
 Then ('user should be in {string}.', (title) =>{
-    cy.contains().should('include', title);
+    cy.contains(title);
 })
