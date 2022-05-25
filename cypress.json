@@ -1,4 +1,15 @@
 {
+  "baseUrl": "http://197.248.44.228:8600/openmrs/login.htm;jsessionid=FF5513350BC886BF8CE8C6832D315C9C?redirect=kenyaemr%2FuserHome.page%3F",
   "ignoreTestFiles": "*.js",
-  "testFiles": "**/*.{feature,features}"
+  "testFiles": "**/*.{feature,features}",
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": "../node_modules",
+    "types": [
+      "cypress"
+    ]
+  },
+  "include": [
+    "**/*.*"
+  ]
 }
