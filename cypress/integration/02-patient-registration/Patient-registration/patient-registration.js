@@ -6,16 +6,17 @@ Cypress.on("uncaught:exception", (err, runnable) => {
     return false;
 });
 
-const url = "https://data.kenyahmis.org:9100/openmrs/login.htm;jsessionid=FF5513350BC886BF8CE8C6832D315C9C?redirect=kenyaemr%2FuserHome.page%3F"; 
+// const url = "https://data.kenyahmis.org:9100/openmrs/login.htm;jsessionid=FF5513350BC886BF8CE8C6832D315C9C?redirect=kenyaemr%2FuserHome.page%3F"; 
 
 Given ('user arrives at the login page', () => {
-    cy.visit(url);
+    cy.visit('/');
 })
 
 When ('user logs using {string} and {string} to the Dashboard', (username, password) => {
-    cy.get('input[id="uname"]').type(username);
-    cy.get('input[name="pw"]').type(password);
-    cy.contains('Login').click();
+   cy.login({
+       username:username,
+       password:password
+   })
 })
 
 Then ('user goes Registration tab', () =>{
