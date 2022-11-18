@@ -1,0 +1,11 @@
+{
+  "ignoreTestFiles": "*.js",
+  "testFiles": "**/*.{feature,features}",
+  "baseUrl": "https://prod.kenyahmis.org:8400/openmrs",
+  "env": {
+    "API_BASE_URL": "https://prod.kenyahmis.org:8400/openmrs/ws/rest/v1",
+    "ADMIN_USERNAME": "admin",
+    "ADMIN_PASSWORD": "Admin123",
+    "ADMIN_UUID": "26bdde28-af32-11ea-a3dd-54e1adcbc0f2"
+  }
+}
