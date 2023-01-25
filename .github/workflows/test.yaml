@@ -1,5 +1,10 @@
 name: End to end tests
-on: [push]
+on:
+  push:
+    branches:
+        - master
+  schedule:
+    - cron: "*/1 * * * *"
 # grouping jobs
 jobs:
   # job to run cypress
